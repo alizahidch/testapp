@@ -24,6 +24,12 @@ export class IndexComponent implements OnInit {
       .getAdUnits()
       .subscribe((data: AdUnit[]) => {
       this.adunits = data;
+      console.log(this.adunits.length);
+    this.adunits.forEach(element => {
+        console.log(element.sales_date)
+      });
     });
+    
   }
+  
 }

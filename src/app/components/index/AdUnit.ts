@@ -1,5 +1,5 @@
 export interface AdUnit {
     id: Number;
-    unit_name: String;
-    unit_price: Number;
+    sales_date: String;
+    sales_amount: Number;
 }

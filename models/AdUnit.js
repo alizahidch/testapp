@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema for AdUnits
 let AdUnit = new Schema({
-  unit_name: {
+  sales_date: {
     type: String
   },
-  unit_price: {
+  sales_amount: {
     type: Number
   }
 },{

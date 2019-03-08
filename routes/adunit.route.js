@@ -20,7 +20,7 @@ adUnitRoutes.route('/add').post(function (req, res) {
 });
 
 // Defined get data(index or listing) route
-adUnitRoutes.route('/').get(function (req, res) {
+ adUnitRoutes.route('/').get(function (req, res) {
     AdUnit.find(function (err, adUnits){
     if(err){
       console.log(err);
@@ -45,8 +45,8 @@ adUnitRoutes.route('/update/:id').post(function (req, res) {
     if (!adUnit)
       return next(new Error('Could not load Document'));
     else {
-        adUnit.unit_name = req.body.unit_name;
-        adUnit.unit_price = req.body.unit_price;
+        // adUnit.unit_name = req.body.unit_name;
+        adUnit.sales_amount = req.body.sales_amount
 
         adUnit.save().then(adUnit => {
           res.json('Update complete');
